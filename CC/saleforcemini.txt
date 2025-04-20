@@ -1,0 +1,87 @@
+🔸 Step 1: Set Up Salesforce Developer Org
+Go to: https://developer.salesforce.com/signup
+
+Sign up using your email and create a free Developer Account
+
+Check your email and log into your Salesforce Developer Edition
+
+🔸 Step 2: Create a New Lightning App
+Click the Gear icon (⚙️) at the top right → Setup
+
+In the Quick Find box (left side), search for App Manager
+
+Click New Lightning App
+
+Follow these steps:
+
+App Name: Book Review App
+
+Developer Name: Book_Review_App
+
+Select Standard Navigation
+
+Assign to System Administrator Profile
+
+Click Finish
+
+🔸 Step 3: Create Custom Objects
+🔹 A. Book Object
+Go to Setup → Search Object Manager
+
+Click Create → Custom Object
+
+Details:
+
+Label: Book
+
+Plural Label: Books
+
+Object Name: Book__c
+
+Enable: Allow Reports, Activities, History, etc.
+
+Click Save
+
+Now add custom fields:
+
+Author (Text)
+
+Genre (Picklist – Fiction, Non-fiction, Tech, Other)
+
+Published Date (Date)
+
+🔹 B. Review Object
+Again, go to Object Manager → Create → Custom Object
+
+Details:
+
+Label: Review
+
+Plural Label: Reviews
+
+Object Name: Review__c
+
+Enable the same settings
+
+Click Save
+
+Now add custom fields:
+
+Reviewer Name (Text)
+
+Rating (Number – 1 to 5)
+
+Comment (Long Text Area)
+
+Book (Lookup to Book) ← This links Review to Book
+
+🔸 Step 4: Establish Relationship
+When adding the Book Lookup field in Review:
+
+Field Label: Book
+
+Data Type: Lookup Relationship
+
+Related To: Book
+
+This lets us connect each review to a book
