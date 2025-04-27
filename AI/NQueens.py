@@ -1,15 +1,14 @@
 def is_safe(board, row, col, N):
-    # Check if there is a queen in the same column
+
     for i in range(row):
         if board[i][col] == 1:
             return False
     
-    # Check upper diagonal on left side
+
     for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
         if board[i][j] == 1:
             return False
-    
-    # Check upper diagonal on right side
+
     for i, j in zip(range(row, -1, -1), range(col, N)):
         if board[i][j] == 1:
             return False
@@ -46,6 +45,5 @@ def solve_n_queens(N):
     
     return True
 
-# Example usage:
 n = 4
 solve_n_queens(n)
